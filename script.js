@@ -7,15 +7,22 @@ let arr = [
   ];
   
   function PrintDeveloperbyMap() {
-    arr.forEach((developer) => {
-      console.log(`ID: ${developer.id}, Name: ${developer.name}, Age: ${developer.age}, Profession: ${developer.profession}`);
-    });
+    let developer=arr.map((item)=>{
+      if(item.profession==="developer")
+      {
+        return item;
+      }
+    })
+    console.log(developer);
   }
   
   function PrintDeveloperbyForEach() {
-    arr.forEach((developer) => {
-      console.log(`ID: ${developer.id}, Name: ${developer.name}, Age: ${developer.age}, Profession: ${developer.profession}`);
-    });
+    arr.forEach(item=>{
+      if(item.profession==="developer")
+      {
+        console.log(item);
+    }
+  })
   }
   
   
